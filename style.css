@@ -1,0 +1,332 @@
+*,
+html,
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 3px #ddd;
+    z-index: 90;
+}
+
+header h1{
+    display: inline-block;
+    padding: 15px 24px;
+    text-transform: uppercase;
+
+}   
+header h1 a {
+    transition: 0.3s;
+}
+header h1 a:hover {
+    color: lightcoral;
+}
+
+header ul {
+    float: right;
+}
+
+header ul li {
+    padding: 24px;
+    display: inline-block;
+}
+
+header ul li a {
+    transition: .3s;
+}
+
+header ul li a:hover {
+    color: lightcoral;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#quote {
+    padding-top: 75px;
+}
+
+.mobile_menu {
+    float: right;
+    display: none;
+    padding: 12px;
+}
+
+.mobile_menu:hover {
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    width: 200px;
+    background-color: rgb(16, 47, 80, .9);
+    transition: .3s;
+    z-index: 999;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    transition: .3s
+;
+}
+
+.sidebar ul li {
+    padding: 24px;
+    transition: 1s;
+    transition-property: background-color;
+}
+
+.sidebar ul li:hover{
+    background-color: lightcoral;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check {
+    display: none;
+}
+
+.banner {
+    background-color: #4b6582;
+    padding: 180px 0;
+}
+section {
+    padding: 50px 0;
+}
+
+.my-foto{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px #ddd;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+
+.my-foto:hover{
+    width: 180px;
+    height: 180px;
+}
+
+.banner-left {
+    padding-left: 24px;
+}
+
+.banner h2,
+.banner p {
+    color: #fff;
+}
+
+.banner h2 {
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+section h3 {
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+section h3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 1px;
+    background-color: #ddd;
+    left: calc(50% - 61px);
+}
+
+section h3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 4px;
+    background-color: #F1553C;
+    left: calc(50% - 20.5px);
+}
+
+#about p {
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+#about {
+    background-color: rgb(241, 241, 241);
+    padding-top: 60px;
+
+}
+
+#contact {
+    background-color: rgb(241, 241, 241);
+    padding-top: 60px;
+}
+
+.col-4 {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 30px 70px;
+    float: left;
+    text-align: justify;
+    font-style: italic;
+}
+
+div .sosmed {
+    display: inline-block;
+}
+
+div .sosmed li {
+    padding: 15px;
+    display: inline-block;
+}
+
+div .sosmed li a svg {
+    width: 20px;
+    height: 20px;
+    transition: .3s;
+}
+
+div .sosmed li a svg:hover {
+    width: 30px;
+    height: 30px;
+}
+
+.col-5{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 30px 70px;
+    float: left;
+    text-align: justify;
+}
+
+.col-5 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    float: right;
+}
+
+
+.col-5 h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.col-5 p {
+    text-align: justify;
+}
+
+
+.col-3 {
+    box-sizing: border-box;
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.col-3 h4 {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+footer small{
+    color: #fff;    
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px){
+    .mobile_menu {
+        display: block;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    .banner {
+        background-color: #4b6582;
+        padding: 171px 0;
+    }
+
+    .col-4 {
+        width: 100%;
+    }
+
+    .col-3 {
+        width: 100%;
+    }
+
+    .col-5 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    
+}
+
+
+
