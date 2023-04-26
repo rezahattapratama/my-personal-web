@@ -71,7 +71,7 @@ a {
 .mobile_menu {
     float: right;
     display: none;
-    padding: 12px;
+    padding: 14px;
 }
 
 .mobile_menu:hover {
@@ -318,6 +318,10 @@ footer small{
 
     .col-5 {
         width: 100%;
+    }
+
+    .col-5{
+        padding: 30px 35px;
     }
 }
 
